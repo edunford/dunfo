@@ -8,3 +8,8 @@ Developer version.
 ```
 pip install git+git://github.com/edunford/edpy.git
 ```
+
+Update previous install.
+```
+!pip install --upgrade  git+git://github.com/edunford/edpy.git
+```
