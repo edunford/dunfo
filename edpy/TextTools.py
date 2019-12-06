@@ -12,6 +12,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.decomposition import NMF, LatentDirichletAllocation
 import datetime as dt
 import re
+import os
+
+
 
 class topicModel:
     '''
@@ -34,7 +37,7 @@ class topicModel:
         self.data = data
         self.text = self.data[text_var].values.tolist()
         self.no_features = no_features
-        self.stop_words = read_csv("Data/stop_words.csv").word.values.tolist()
+        self.stop_words = read_csv(os.path.expanduser("data/stop_words.csv")).word.values.tolist()
         self.is_vectorized = False
 
 
