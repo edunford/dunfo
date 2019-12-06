@@ -36,7 +36,7 @@ class topicModel:
         self.data = data
         self.text = self.data[text_var].values.tolist()
         self.no_features = no_features
-        self.stop_words = read_sql("SELECT * from stop_words",con=sqlite3.connect('data.sqlite')).word.values.tolist()
+        self.stop_words = read_sql("SELECT * from stop_words",con=sqlite3.connect('edpy/data.sqlite')).word.values.tolist()
         self.is_vectorized = False
 
 
