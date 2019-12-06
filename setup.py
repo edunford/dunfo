@@ -1,13 +1,13 @@
 from distutils.core import setup
 setup(
-  name = 'dunfo',
-  packages = ['dunfo'],
+  name = 'edpy',
+  packages = ['edpy'],
   version = '0.0.1',
   license='MIT',
   description = 'A python module built and curated with only one person in mind. Module contains  miscellaneous methods that I use on the reg',
   author = 'Eric Dunford',
   author_email = 'ethomasdunford@gmail.com',
-  url = 'https://github.com/edunford/dunfo',
+  url = 'https://github.com/edunford/edpy',
   download_url = '',
   keywords = ['tidy', 'misc','wrangling','data','pandas'],
   install_requires=[
