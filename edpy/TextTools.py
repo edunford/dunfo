@@ -7,12 +7,11 @@ TODOs:
     - Build tidytext emulator (to weild text data in that way)
 '''
 
-from pandas import read_sql, DataFrame
+from pandas import DataFrame
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 from sklearn.decomposition import NMF, LatentDirichletAllocation
 import datetime as dt
 import re
-import sqlite3
 
 
 class topicModel:
@@ -36,7 +35,7 @@ class topicModel:
         self.data = data
         self.text = self.data[text_var].values.tolist()
         self.no_features = no_features
-        self.stop_words = read_sql("SELECT * FROM 'stop_words'",con=sqlite3.connect('data.sqlite')).word.values.tolist()
+        self.stop_words = __stopwords__
         self.is_vectorized = False
 
 
